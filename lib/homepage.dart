@@ -10,12 +10,6 @@ class HomePage extends StatelessWidget {
 
   final myController1 = TextEditingController();
   final myController2 = TextEditingController();
-  void dispose() {
-    myController1.dispose();
-    myController2.dispose();
-
-    dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -138,6 +132,7 @@ class HomePage extends StatelessWidget {
                                                     ? int.parse(
                                                         myController2.text)
                                                     : myModel.phone);
+                                            myController1.clear();
                                             Navigator.pop(context);
                                           },
                                           color:
@@ -237,6 +232,7 @@ class HomePage extends StatelessWidget {
                                                     ? int.parse(
                                                         myController2.text)
                                                     : myModel.phone);
+                                            myController2.clear();
                                             Navigator.pop(context);
                                           },
                                           color:
